@@ -20,4 +20,4 @@ The following instructions get the client and server application up and running 
 - The last argument `4444` specifies the port that the Server is listening on.
 
 ## Built With
-* [Java](https://www.oracle.com/java/) - The web framework used
+* [Java](https://www.oracle.com/java/)
