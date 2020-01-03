@@ -5,8 +5,8 @@ The Java Client/Server Application features two separate applications, one run o
 The following instructions get the client and server application up and running on your machine.
 
 ### Prerequisites
-**Client Application** - will run on any operating system (OS) with a Java Virtual Machine (JVM).
-**Server Application** - will run on any OS but will only work with the Linux OS. Multiple OS support coming soon.
+* **Client Application** - will run on any operating system (OS) with a Java Virtual Machine (JVM).
+* **Server Application** - will run on any OS but will only work with the Linux OS. Multiple OS support coming soon.
 
 **Starting the Server:**
 ```java -cp bin/ Server 4444```
