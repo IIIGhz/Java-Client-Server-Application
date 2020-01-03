@@ -14,28 +14,30 @@ import java.io.*;
 
 public class ServerThread implements Runnable {
 	
-	private Socket clientSocket = null;
+	private Socket clientSocket;
+	private String OS;
 
 	/**
 	 * Constructor
-	 * @param The client socket.
+	 * @param clientSocket, OS.
 	 */
 	
-	public ServerThread(Socket clientSocket) {
+	public ServerThread(Socket clientSocket, String OS) {
 		this.clientSocket = clientSocket;
+		this.OS = OS;
 	}
 	
 	@Override
 	public void run() {
 		// Create I/O Stream
 		try(PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
-				BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));) {
+				BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()))) {
 			
 			String input, output; // Variables used for I/O
 
 			// Create a new ServerProtocol object. Which will handle execution of the
 			// commmand's on the server.
-			ServerProtocol sp = new ServerProtocol();
+			ServerProtocol sp = new ServerProtocol(OS);
 
 			while ((input = in.readLine()) != null) {
 				// Process the command received from client
