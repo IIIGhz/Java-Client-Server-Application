@@ -1,5 +1,5 @@
 # Java Client/Server Application
-The Java Client/Server Application features two separate applications, one run on the client machine and one run on a server. The client application queries the server for various system information and measures the response time for each request. This project has been developed 
+The Java Client/Server Application features two separate applications, a client application and a server application. The client application queries the server for various system information and measures the response time for each request. This project has been developed 
 
 ## Getting Started
 The following instructions get the client and server application up and running on your machine.
